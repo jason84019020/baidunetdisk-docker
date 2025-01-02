@@ -1,0 +1,10 @@
+services:
+  baidunetdisk:
+    container_name: baidunetdisk
+    image: jason84019020/baidunetdisk-docker:1.0.0
+    restart: unless-stopped
+    volumes:
+      - ./downloads:/config/Downloads
+    ports:
+      - 5900:5900
+      - 5800:5800
